@@ -30,5 +30,6 @@ public class Player : MonoBehaviour
     {
         isDead = true;
         playerAnimator.SetTrigger("Daño");
+        GameManager.Instance.GameOver();
     }
 }
