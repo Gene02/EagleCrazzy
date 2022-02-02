@@ -9,11 +9,13 @@ public class Player : MonoBehaviour
     private bool isDead;
     private Rigidbody2D playerRb;
     private Animator playerAnimator;
+    AudioSource audio;
    
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,6 +25,8 @@ public class Player : MonoBehaviour
         {
             playerRb.velocity = Vector2.zero;
             playerRb.AddForce(Vector2.up * 350f);
+            audio.Play();
+
         }
     }
 
