@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
     public bool isGameOver;
     private int score;
     private int highscore;
+    private int GameOver;
 
     private static GameManager instance;
     public static GameManager Instance { get { return instance; } }
@@ -34,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
        if(Input.GetMouseButtonDown(0) && isGameOver)
         {
+            SceneManager.LoadScene("MenuGameOver");
             RestartGame();
         } 
     }
@@ -46,6 +49,7 @@ public class GameManager : MonoBehaviour
     private void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("MenuGameOver");
     }
     public void IncreaseScore()
     {
@@ -53,6 +57,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = score.ToString();
         highscore = (int)score;
         scoreText.text = highscore.ToString();
+        GameOverText.text = GameOver.ToString();
 
 
         if(PlayerPrefs.GetInt("score")<=highscore)
