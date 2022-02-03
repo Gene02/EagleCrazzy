@@ -912,7 +912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4734bd620e2a4384c8b69f7d30914daf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverText: {fileID: 0}
+  gameOverText: {fileID: 3772763419162878096, guid: 5f9da8397fc54ae47b6bdb1115fae9b7, type: 3}
   scoreText: {fileID: 255818071}
   highscoreText: {fileID: 103096296}
   isGameOver: 0

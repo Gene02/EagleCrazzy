@@ -37,4 +37,5 @@ public class Player : MonoBehaviour
         playerAnimator.SetTrigger("Daño");
         GameManager.Instance.GameOver();
     }
+   
 }
