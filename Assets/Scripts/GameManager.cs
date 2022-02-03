@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public bool isGameOver;
     private int score;
     private int highscore;
-    private int GameOver;
+    private GameOverText;
 
     private static GameManager instance;
     public static GameManager Instance { get { return instance; } }
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     {
        if(Input.GetMouseButtonDown(0) && isGameOver)
         {
-            SceneManager.LoadScene("MenuGameOver");
+            //SceneManager.LoadScene("MenuGameOver");
             RestartGame();
         } 
     }
@@ -44,7 +44,8 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isGameOver = true;
-        gameOverText.SetActive(true);
+        GameOverText.SetActive(true);
+
     }
     private void RestartGame()
     {
@@ -57,7 +58,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = score.ToString();
         highscore = (int)score;
         scoreText.text = highscore.ToString();
-        GameOverText.text = GameOver.ToString();
+        //gameOverText.text = GameOver.ToString();
 
 
         if(PlayerPrefs.GetInt("score")<=highscore)

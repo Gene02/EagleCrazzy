@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GameObject GameOverScreen;
     [SerializeField] private float upForce = 350;
 
     private bool isDead;

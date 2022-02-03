@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 274466574}
   - component: {fileID: 274466573}
   - component: {fileID: 274466572}
+  - component: {fileID: 274466575}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -284,7 +285,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 274466573}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 274466570}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &274466573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +336,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274466570}
   m_CullTransparentMesh: 1
+--- !u!114 &274466575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274466570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 199d42b4224cf3849a08d66cded535d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1163804317
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +666,7 @@ GameObject:
   - component: {fileID: 1358198655}
   - component: {fileID: 1358198654}
   - component: {fileID: 1358198653}
+  - component: {fileID: 1358198657}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -732,6 +758,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1358198657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358198652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4734bd620e2a4384c8b69f7d30914daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverText: {fileID: 1358198652}
+  scoreText: {fileID: 0}
+  highscoreText: {fileID: 0}
+  isGameOver: 0
 --- !u!1 &1533099576
 GameObject:
   m_ObjectHideFlags: 0
